@@ -21,5 +21,10 @@
 
 # 配置环境
 
-一、 npx create-react-app my-app
+1. npx create-react-app my-app
+2. npm eject 弹射 隐藏配置文件
+
+想要配置jest 需要有npm管理 然后安装
+
+使用脚手架
 
