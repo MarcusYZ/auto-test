@@ -13,7 +13,7 @@ module.exports =  {
     "<rootDir>/src/setupTests.js"
   ], // 对环境做一些额外的准备
   "testMatch": [
-    "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}", // 测试时要执行的文件
+    "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}", // 测试时要执行的文件格式
     "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"
   ],
   "testEnvironment": "jest-environment-jsdom-fourteen",
