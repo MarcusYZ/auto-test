@@ -26,5 +26,6 @@
 
 想要配置jest 需要有npm管理 然后安装
 
-使用脚手架
-
+3. 安装 enzyme 
+npm i enzyme
+npm i --save-dev enzyme enzyme-adapter-react-16
