@@ -10,7 +10,6 @@ import Header from '../../components/Header'
 
   // 首先考虑Header组件要包含的内容
   // header 组件里需要input框
-
 it('Header 组件包含一个 input 框', () => {
   const wrapper = shallow(<Header />)
   const inputElem = findTestWrapper(wrapper, 'input')

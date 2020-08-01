@@ -65,7 +65,7 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "jest": "jest --watchAll"
+    "jest": "jest --watch"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -88,6 +88,7 @@
     ]
   },
   "devDependencies": {
+    "axios": "^0.19.2",
     "en": "^1.0.1",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",

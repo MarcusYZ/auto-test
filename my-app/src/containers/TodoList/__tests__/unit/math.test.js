@@ -1,4 +1,4 @@
-const math = require('../../../../../knowledge/math.js');
+const math = require('../../../../../unit/math.js');
 const {add} = math;
 test('测试 3 +7', () => {
   expect(add(3, 7)).toBe(10)
