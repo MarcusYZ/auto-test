@@ -32,3 +32,14 @@ it('Header 组件 input框内容 ，当用户输入时会跟随变化', () => {
   })
   expect(wrapper.state('value')).toEqual(userInput) 
 })
+
+it('Header 组件 input 输入框 回撤后，如果input无内容, 无操作', () => {
+  const fn = jest.fn();
+  const wrapper = shallow(<Header />);
+  const inputElem = findTestWrapper(wrapper, 'input')
+  const value = '';
+  wrapper.setState({value: ''});
+  inputElem.simulate('keyUp', {
+    keyCode: 13
+  })
+})
