@@ -10,6 +10,8 @@ import Header from "../../components/Header";
 
 // 首先考虑Header组件要包含的内容
 // header 组件里需要input框
+
+// 当组件不会频繁发生内容的改变的时候可以采用快照
 it("Header 渲染样式正常", () => {
   const wrapper = shallow(<Header />);
   expect(wrapper).toMatchSnapshot();
