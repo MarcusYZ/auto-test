@@ -32,13 +32,28 @@ it('Header 组件 input框内容 ，当用户输入时会跟随变化', () => {
   expect(wrapper.state('value')).toEqual(userInput) 
 })
 
-it('Header 组件 input 输入框 回撤后，如果input无内容, 无操作', () => {
+// 以下两个测试用例是成对的
+it('Header 组件 input 输入框 回车后，如果input无内容, 无操作', () => {
   const fn = jest.fn();
-  const wrapper = shallow(<Header />);
+  const wrapper = shallow(<Header addUndoItem={fn}/>); // 未来的数据会存放在todoList中，所以设计上会调用在headr里的方法控制todolist里的数据
   const inputElem = findTestWrapper(wrapper, 'input')
-  const value = '';
   wrapper.setState({value: ''});
   inputElem.simulate('keyUp', {
     keyCode: 13
   })
+  expect(fn).not.toHaveBeenCalled();
+})
+
+
+// TODO 测试方法报错
+it('Header 组件 input 输入框 回车后，如果input有内容，函数应该被调用', () => {
+  const fn = jest.fn();
+  const wrapper = shallow(<Header addUndoItem={fn} />); //
+  const inputElem = findTestWrapper(wrapper, 'input')
+  wrapper.setState({value: '学习 React'});
+  inputElem.simulate('keyUp', { 
+    keyCode: 13
+  })
+  // expect(fn).toHaveBeenCalled();
+  // expect(fn).toHaveBeenLastCalledWith('学习 React');
 })

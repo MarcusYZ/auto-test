@@ -62,7 +62,7 @@ it ('fetchData 返回结果是 {success: true}', (done) => {
 
 // 失败的测试用例
 it ('fetchNewData 返回结果为 404', async () => {
-  expect.assertions(1)
+  expect.assertions(1) 
   try {
     await fetchNewData();
   } catch (e) {

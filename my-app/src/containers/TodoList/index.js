@@ -5,7 +5,7 @@ class TodoList extends Component {
   render() {
     return (
       <div>
-        <Header />
+        <Header addUndoItem={console.log(1)} />
       </div>
     )
   }
