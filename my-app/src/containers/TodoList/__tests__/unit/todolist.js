@@ -1,6 +1,11 @@
+import Enzyme from "enzyme";
+import Adapter from "enzyme-adapter-react-16";
+
+Enzyme.configure({ adapter: new Adapter() }); // Enzyme 使用adapter配置
+
 import React from 'react'
 import Todolist from '../../index'
-import { findTestWrapper } from '../../../../../src/utils/testUtils'; 
+import { findTestWrapper } from '../../../../utils/testUtils'; 
 import { shallow } from 'enzyme';
 
 it( 'Todolist 初始化列表为空', () => {
