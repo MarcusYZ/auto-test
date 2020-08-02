@@ -22,7 +22,7 @@ it('Header 组件初始化为空', () => {
   expect(inputElem.prop('value')).toEqual('');
 })
 
-it('Header 组件 input框内容 ，当用户输入时会跟随变化', () => {
+it('Header 组件 input框存在内容 ，当用户输入时会跟随变化', () => {
   const wrapper = shallow (<Header />);
   const inputElem = findTestWrapper(wrapper, 'input')
   const userInput = '今天要学习jest';
@@ -48,12 +48,13 @@ it('Header 组件 input 输入框 回车后，如果input无内容, 无操作', 
 // TODO 测试方法报错
 it('Header 组件 input 输入框 回车后，如果input有内容，函数应该被调用', () => {
   const fn = jest.fn();
-  const wrapper = shallow(<Header addUndoItem={fn} />); //
+  const wrapper = shallow(<Header addUndoItem={fn} />); 
   const inputElem = findTestWrapper(wrapper, 'input')
-  wrapper.setState({value: '学习 React'});
+  const useInput = '学习 React'
+  wrapper.setState({value: useInput});
   inputElem.simulate('keyUp', { 
     keyCode: 13
   })
-  // expect(fn).toHaveBeenCalled();
-  // expect(fn).toHaveBeenLastCalledWith('学习 React');
+  expect(fn).toHaveBeenCalled();
+  expect(fn).toHaveBeenLastCalledWith(useInput);
 })

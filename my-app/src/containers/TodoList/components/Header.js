@@ -17,12 +17,13 @@ class Header extends Component {
   }
   
   handleInputKeyUp(e) {
-    console.log(1);
     const {value} = this.state;
     if (e.keyCode === 13 && value) {
       this.props.addUndoItem(value);
+      this.setState({value: ''});
     } 
   }
+  
   render() {
     const {value} = this.state;
     return (
