@@ -23,7 +23,8 @@ afterEach(()=> {
   
 })
 describe('测试增加方法的方法', () => {
-  it('测试 addOne()', () => {
+  // only 表示只执行这一个方法
+  test.only('测试 addOne()', () => { 
     counter.addOne();
     expect(counter.number).toBe(1);
   })
@@ -35,4 +36,6 @@ describe('测试减少相关的的方法', () => {
     expect(counter.number).toBe(0);
   })
 }); 
+
+// 代码的准备 一定要放在 钩子函数里，如果是放在discribe里 会优先执行，  最外层的会最先执行， 里面的会接着依次执行。
 
