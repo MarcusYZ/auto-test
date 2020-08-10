@@ -7,6 +7,7 @@ class TodoList extends Component {
   constructor(props) {
     super(props);
     this.addUndoItem = this.addUndoItem.bind(this);
+    this.deleteItem = this.deleteItem.bind(this);
     this.state = {
       undoList: [],
     }
