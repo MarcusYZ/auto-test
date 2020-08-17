@@ -1,3 +1,6 @@
+body {
+  background-color: #cdcdcd;
+}
 .header {
   line-height: 60px;
   background: #333;
@@ -17,4 +20,48 @@
   border-radius: 5px;
   align-items: center;
   padding: 0 10px;
+}
+.undo-list {
+  margin: 0 auto;
+  width: 600px;
+}
+
+.undo-list-title {
+ margin: 10px 0;
+ line-height: 30px;
+ font-size: 24px;  
+ font-weight: bold;
+}
+.undo-list-count {
+  float: right;
+  width: 30px;
+  height: 30px;
+  font-size: 12px;
+  text-align: center;
+  background: #e6e6ea;
+  border-radius: 50%;
+}
+.undo-list-content {
+  list-style-type: none;
+}
+.undo-list-item {
+  line-height: 24px;
+  font-size: 12px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border-left: 3px solid #629A9C;
+  border-radius: 3px;
+}
+
+.undo-list-delete {
+  float: right;
+  width: 20px;
+  height: 20px;
+  margin-top: 3px;
+  margin-right: 6px;
+  line-height: 20px;
+  text-align: center;
+  background-color: #E6E6EA;
+  text-indent: 0;
+  border-radius: 50%;
 }
